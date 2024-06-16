@@ -10,8 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cibertec.cibertecapp.R
 import com.cibertec.cibertecapp.cursos.Curso
 import com.cibertec.cibertecapp.cursos.CursosAdapter
+import com.cibertec.cibertecapp.menu.MenuDrawerAction
 
 class SubjectFragment: Fragment() {
+    lateinit var  interfaceMenu: MenuDrawerAction
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,6 +32,10 @@ class SubjectFragment: Fragment() {
             Curso("Curso de Java", R.drawable.logo_java),
             Curso("Curso de OWASP", R.drawable.logo_owasp)
         )
+        val toolbarNews = view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarNews)
+        toolbarNews.setNavigationOnClickListener{
+            interfaceMenu.openMenu()
+        }
 
         val adapter = CursosAdapter(listCursos)
         recyclerCursos.adapter = adapter

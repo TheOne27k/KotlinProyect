@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--de preferencia se pone ifRoom para evitar que las opciones se muestren si no hay espacio
+    ya que si se usa always aunque haya algo se pondrá encima-->
+    <item
+        android:id="@+id/itemCompartir"
+        android:title="Compartir"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/baseline_emergency_share_24"/>
+    <item
+        android:id="@+id/itemActualizar"
+        android:title="Actualizar"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/baseline_change_circle_24"/>
+
+</menu>
