@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".MainActivity">
+    tools:context=".auth.LoginActivity">
 
     <ImageView
         android:layout_width="200dp"
@@ -70,6 +70,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPasswordRepeat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
